@@ -1,0 +1,193 @@
+<apex:page sidebar="false" controller="loginController" showheader="false" standardStylesheets="false">
+    
+    <apex:form >    
+    <style>
+        
+        .main{
+         width: 1500px;
+         height: 700px;
+    	 background-color: white;
+        }
+        
+        .row1{
+         width: 1500px;
+         height: 100px;
+         background-color: white;
+         font-size: 3rem;
+         color: rgb(146,94,214);
+         font-weight: bolder;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         border-bottom: 2px solid black;
+         font-style: italic; 
+        }
+        
+        .row2{
+         width: 200px;
+         height: 20px;
+         text-align: right;
+         font-size: 17px;
+         font-weight: bolder;
+         padding: 10px;
+         border: 2px solid black;
+         float:right;
+         text-align: center;
+         color:rgb(146,94,214);
+        }
+        
+        .row3{
+         width: 1500px;
+         height: 100px;
+        }
+        
+        .row3-col1{
+         width: 200px;
+         height: 100px;
+         float:left;
+        }
+
+         .row3-col2{
+         width: 200px;
+         height: 100px;
+         float:left;
+         text-align: center;
+         font-weight: bold;
+         color:rgb(146,94,214);
+        }
+        
+         .row3-col3{
+         width: 200px;
+         height: 100px;
+         float:left;
+         text-align: center;
+         font-weight: bold;
+         color:rgb(146,94,214);
+        }
+        
+         .row3-col4{
+         width: 200px;
+         height: 100px;
+         float:left;
+         text-align: center;
+         font-weight: bold;
+         color:rgb(146,94,214);
+        }
+        
+         .row3-col5{
+         width: 200px;
+         height: 100px;
+         float:left;
+         text-align: center;
+         font-weight: bold;
+         color:rgb(146,94,214);
+        }
+        
+         .row3-col6{
+         width: 200px;
+         height: 100px;
+         float:left;
+         text-align: center;
+         font-weight: bold;
+         color:rgb(146,94,214);
+        }
+        
+        .row4{
+         width: 1500px;
+         height: 100px;
+        }
+        
+        .row4-col1{
+         width: 1200px;
+         height: 100px;
+         float: left;
+        }
+        
+        .row4-col2{
+         width: 250px;
+         height: 150px;
+         float: right;
+         padding: 20px;
+         border: 2px solid black;
+         font-weight: bold;
+         color:rgb(146,94,214);
+        
+        } 
+        
+        #unm{
+        margin-right:10px;
+        margin-bottom:5px;
+        }
+        
+        #ps{
+         margin-right:13px;
+         margin-top:15px;
+        }
+        
+        .mar{
+        margin-bottom:5px;
+        }
+        
+        .purple-button {
+         color: white;
+         background-color: rgb(146,94,214);
+         border: none;
+         padding: 6px 2px;
+         text-decoration: none;
+         margin: 4px 2px;
+         cursor: pointer;
+         text-align : center;
+         margin-top: 1rem;
+         width:10rem;
+         justify-item: center;
+          margin-left:50px;
+        }
+    </style>
+    <div class="main">
+       <div class="row1">Help In Need</div>
+        <div class="row2">Become a Tasker</div>
+        <div class="row3">
+            <div class="row3-col1">
+               <apex:image id="theImage" value="{!$Resource.ikea}" width="100" height="80"/> 
+            </div>
+            <div class="row3-col2">
+                <apex:image id="theImage2" value="{!$Resource.cleaningIcon}" width="100" height="80"/> <br/>
+                <label>Cleaning Service</label>
+            </div>
+            <div class="row3-col3">
+                <apex:image id="theImage3" value="{!$Resource.PickuptruckIcon}" width="100" height="80"/> <br/>
+                <label>Moving Service</label>
+            </div>
+            <div class="row3-col4">
+                <apex:image id="theImage4" value="{!$Resource.mechanicIcon}" width="100" height="80"/> <br/>
+                <label>Repair Service</label>
+            </div>
+            <div class="row3-col5">
+                <apex:image id="theImage5" value="{!$Resource.tutorIcon}" width="100" height="80"/> <br/>
+                <label>Tutor</label>
+            </div>
+            <div class="row3-col6">
+                <apex:image id="theImage6" value="{!$Resource.paintingIcon}" width="100" height="80"/> <br/>
+                <label>Home painting</label>
+            </div>
+            
+        </div>
+        <div class="row4">
+            <div class="row4-col1">
+             <apex:image id="theImage1" value="{!$Resource.workerImg}" width="1200" height="600"/></div>   
+            </div>
+             <div class="row4-col2">
+                 <div class="mar">
+                   <label id="unm" for="uname">Username</label>
+                   <apex:inputtext value="{!uname}"/>  
+                 </div>
+                 <div>
+                    <label id="ps" for="psw">Password</label>
+                    <apex:inputsecret value="{!psw}"/><br/>  
+                 </div>
+                 <apex:commandbutton styleClass="purple-button" value="Login" action="{!doLogin}"/>
+                 <br/>
+                 <apex:outputLink value="/apex/ForgotPassword">Forgot Password</apex:outputLink><br/>
+                 <apex:outputLink value="/apex/SiteRegister">Not a User</apex:outputLink><br/>
+            </div> 
+      </div> 
+   </apex:form>
+</apex:page>
